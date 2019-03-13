@@ -1,21 +1,12 @@
 import * as React from "react";
 import { FriendComponent } from "./friend/friend";
-
-interface IFriend {
-  name: string;
-  id: number;
-}
-
-interface IFriends {
-  friends?:  IFriend[];
-}
-
+import { IFriend, IFriends } from "./types";
 
 export class FriendsList extends React.Component<IFriends, IFriends> {
 
   constructor(props) {
     super(props);
-    const friends: IFriends = { friends: [{ name: 'saurabh', id: 222}]};
+    const friends: IFriends = { friends: [{ name: 'saurabh', id: 222}, { name: 'Michale', id: 111}]};
     this.state = friends;
   }
 

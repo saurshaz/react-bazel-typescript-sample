@@ -1,16 +1,6 @@
 
 import * as React from "react";
-
-
-interface IFriend {
-  name: string;
-  id: number;
-}
-
-interface IFriends {
-  friends:  IFriend[];
-}
-
+import { IFriend, IFriends } from "../types";
 
 export class FriendComponent extends React.Component<IFriend, IFriend> {
   render() {

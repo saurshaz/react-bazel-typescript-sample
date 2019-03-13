@@ -8,6 +8,7 @@ ts_library(
     tsconfig = "//:tsconfig.json",
     deps = [
         "//src/frontend/config",
+        "//src/frontend/types",
         "@npm//react",
         "@npm//@types/react",
     ]
