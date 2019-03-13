@@ -7,7 +7,6 @@ ts_library(
     srcs = ["main.tsx", "app.tsx"],
     tsconfig = "//:tsconfig.json",
     deps = [
-       "//src/model",
        "//src/frontend/friend:src",
        "@npm//react",
        "@npm//@types/react",

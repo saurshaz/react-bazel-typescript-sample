@@ -1,14 +1,21 @@
 import * as React from "react";
 import { FriendComponent } from "./friend/friend";
-import { FriendService } from "./friend/friend-service";
-import { IFriend, IFriends } from "../model";
+
+interface IFriend {
+  name: string;
+  id: number;
+}
+
+interface IFriends {
+  friends?:  IFriend[];
+}
+
 
 export class FriendsList extends React.Component<IFriends, IFriends> {
-  friendService = new FriendService();
 
   constructor(props) {
     super(props);
-    const friends: IFriends = { friends: [] };
+    const friends: IFriends = { friends: [{ name: 'saurabh', id: 222}]};
     this.state = friends;
   }
 
@@ -27,6 +34,5 @@ export class FriendsList extends React.Component<IFriends, IFriends> {
   }
 
   componentDidMount() {
-    this.friendService.getFriends().then(friends => this.setState({ friends }));
   }
 }
